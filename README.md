@@ -3,8 +3,9 @@ Tool for S&amp;ASRT to automatically stop/start OBS recording when races start/f
 
 # How to install:
 1. Download and install the OBS websocket plugin from here: https://github.com/Palakis/obs-websocket/releases
+2. Extract the contents of a zip file to somewhere on your computer.
 2. Start OBS Studio.
-3. Start "Auto Recorder.exe".
+3. Start "Auto Recorder.exe" from the extracted files.
 
 # The program will:
 1. Start recording races when the countdown begins (or immediately if, the app is started during a race).
