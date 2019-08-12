@@ -1,4 +1,4 @@
-# ASRT Auto Recorder
+# S&ASRT Auto Recorder
 Tool for S&amp;ASRT to automatically stop/start OBS recording when races start/finish.
 
 # How to install:
@@ -12,5 +12,5 @@ Tool for S&amp;ASRT to automatically stop/start OBS recording when races start/f
 3. Stop recording if you restart/quit the race or close the game.
 
 # Notes:
-You can open the program at any time, it will automatically connect to OBS/S&ASRT when they are opened.
+You can open the program at any time, it will automatically connect to OBS and S&ASRT when they are opened.
 It works in online multiplayer, local races and grand prix.
