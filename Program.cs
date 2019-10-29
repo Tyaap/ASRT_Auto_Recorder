@@ -55,7 +55,6 @@ namespace Auto_Recorder
                     catch
                     { }
 
-                if (handle == 0)
                 processes = Process.GetProcessesByName("ASN_App_PcDx9_Final");
 
                 if (processes.Length == 0)
