@@ -65,6 +65,12 @@ namespace Auto_Recorder
                 }
                 else if (handle == 0)
                 {
+                    if (processes[0].MainModule.ModuleMemorySize != 0xC7C000 && processes[0].MainModule.ModuleMemorySize != 0xD06000)
+                    {
+                        MessageBox.Show("You cannot use this autorecorder tool. Please ensure you are\n" +
+                                        "running the correct version of the game!", "ASRT Auto Recorder", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Environment.Exit(2);
+                    }
                     Thread.Sleep(2000);
                     handle = OpenProcess(0x38, 0, processes[0].Id);
                     Initialise();
@@ -106,6 +112,8 @@ namespace Auto_Recorder
 
                 if (obs.IsConnected)
                     MainForm.BeginInvoke((MethodInvoker)delegate () { MainForm.label1.Text = "Current Status: Auto recording!"; });
+                else if (obs.IsConnected && handle == 0)
+                    MainForm.BeginInvoke((MethodInvoker)delegate () { MainForm.label1.Text = "Current Status: Not auto recording (game not open)"; });
                 else
                     MainForm.BeginInvoke((MethodInvoker)delegate () { MainForm.label1.Text = "Current Status: Not auto recording (could not find OBS)"; });
 
