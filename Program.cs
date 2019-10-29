@@ -55,6 +55,7 @@ namespace Auto_Recorder
                     catch
                     { }
 
+                if (handle == 0)
                 processes = Process.GetProcessesByName("ASN_App_PcDx9_Final");
 
                 if (processes.Length == 0)
@@ -65,6 +66,12 @@ namespace Auto_Recorder
                 }
                 else if (handle == 0)
                 {
+                    if (processes[0].MainModule.ModuleMemorySize != 0xC7C000 && processes[0].MainModule.ModuleMemorySize != 0xD06000)
+                    {
+                        MessageBox.Show("You cannot use this autorecorder tool. Please ensure you are\n" +
+                                        "running the correct version of the game!", "ASRT Auto Recorder", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Environment.Exit(2);
+                    }
                     Thread.Sleep(2000);
                     handle = OpenProcess(0x38, 0, processes[0].Id);
                     Initialise();
