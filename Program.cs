@@ -112,6 +112,8 @@ namespace Auto_Recorder
 
                 if (obs.IsConnected)
                     MainForm.BeginInvoke((MethodInvoker)delegate () { MainForm.label1.Text = "Current Status: Auto recording!"; });
+                else if (obs.IsConnected && handle == 0)
+                    MainForm.BeginInvoke((MethodInvoker)delegate () { MainForm.label1.Text = "Current Status: Not auto recording (game not open)"; });
                 else
                     MainForm.BeginInvoke((MethodInvoker)delegate () { MainForm.label1.Text = "Current Status: Not auto recording (could not find OBS)"; });
 
