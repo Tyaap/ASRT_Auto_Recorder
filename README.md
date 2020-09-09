@@ -1,5 +1,5 @@
 # Auto Recorder
-Tool for S&amp;ASRT to automatically stop/start OBS recording when races start/finish.
+Tool for S&amp;ASRT to automatically start/stop OBS recording when races start/finish.
 
 # How to install:
 1. Download and install the OBS websocket plugin from here: https://github.com/Palakis/obs-websocket/releases
