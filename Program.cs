@@ -73,7 +73,7 @@ namespace Auto_Recorder
                 if (handle != 0)
                 {
                     pRaceState = raceState;
-                    raceState = ReadByte(0x1FFFC);
+                    raceState = ReadByte(0xFF0FFC);
                     pLoadState = loadState;
                     loadState = GetLoadState();
 
@@ -129,7 +129,7 @@ namespace Auto_Recorder
         static void Initialise()
         {
             WriteProcessMemory(handle, 0x70665C, new byte[] { 0xEB, 0x28 }, 2, 0);
-            WriteProcessMemory(handle, 0x706686, new byte[] { 0x8B, 0xF1, 0x89, 0x3D, 0xFC, 0xFF, 0x01, 0x00, 0xEB, 0xCE }, 10, 0);
+            WriteProcessMemory(handle, 0x706686, new byte[] { 0x8B, 0xF1, 0x89, 0x3D, 0xFC, 0x0F, 0xFF, 0x00, 0xEB, 0xCE }, 10, 0);
         }
 
         static byte[] ReadBytes(int Address, int ByteCount)
