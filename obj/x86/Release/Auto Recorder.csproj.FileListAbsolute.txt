@@ -1,0 +1,5 @@
+C:\Users\Emanuele\Source\Repos\ASRT_Auto_Recorder\obj\x86\Release\Auto_Recorder.MainForm.resources
+C:\Users\Emanuele\Source\Repos\ASRT_Auto_Recorder\obj\x86\Release\Auto_Recorder.Properties.Resources.resources
+C:\Users\Emanuele\Source\Repos\ASRT_Auto_Recorder\obj\x86\Release\Auto Recorder.csproj.GenerateResource.cache
+C:\Users\Emanuele\Source\Repos\ASRT_Auto_Recorder\obj\x86\Release\Auto Recorder.csproj.CoreCompileInputs.cache
+C:\Users\Emanuele\Source\Repos\ASRT_Auto_Recorder\obj\x86\Release\Auto_Recorder.exe
